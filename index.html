@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cedar Rose</title>
+
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #161a22;
+            --accent: #f4b860;
+            --text: #e6e8ee;
+            --muted: #9aa1b2;
+            --border: #242a38;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+            background: radial-gradient(1200px 600px at 20% -10%, #1b2030, var(--bg));
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 3rem 1.5rem 2rem;
+            text-align: center;
+        }
+
+        header img {
+            width: 96px;
+            height: 96px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 0.5px;
+        }
+
+        header p {
+            margin-top: 0.5rem;
+            color: var(--muted);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            display: grid;
+            gap: 2rem;
+        }
+
+        .card {
+            background: linear-gradient(180deg, #1a1f2b, var(--card));
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .asset-preview {
+            display: grid;
+            gap: 1.25rem;
+        }
+
+        .asset-preview img {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .asset-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .asset-meta strong {
+            font-size: 1.1rem;
+        }
+
+        .asset-meta span {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .button {
+            margin-top: 1rem;
+            align-self: flex-start;
+            text-decoration: none;
+            background: linear-gradient(180deg, #f8c979, var(--accent));
+            color: #1b1408;
+            padding: 0.6rem 1.1rem;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            box-shadow: 0 6px 20px rgba(244,184,96,0.35);
+        }
+
+        .button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 28px rgba(244,184,96,0.45);
+        }
+
+        .contact-list {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .contact-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.75rem 1rem;
+            background: #141925;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .contact-item span {
+            color: var(--muted);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem 3rem;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 720px) {
+            .asset-preview {
+                grid-template-columns: 1.1fr 1fr;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER / LOGO -->
+    <header>
+        <!-- Replace logo.png with your own logo file or a hosted URL -->
+        <img src="logo.png" alt="Studio Logo" />
+        <h1>Cedar Rose</h1>
+        <p>Light weight Unity tools built for real production workflows and Indie developers alike.</p>
+    </header>
+
+    <main>
+
+        <!-- UNITY ASSET STORE SHOWCASE -->
+        <section class="card">
+            <h2>Unity Asset Store</h2>
+
+            <div class="asset-preview">
+                <!-- Optional asset image -->
+                <img src="asset-preview.png" alt="Asset Preview" />
+
+                <div class="asset-meta">
+                    <strong>Asset Name</strong>
+                    <span>
+                        A tiny but powerful interaction shell that developers can drop into any genre — FPS, ARPG, top-down, VR-lite, third person, 2D, everything.
+                    </span>
+
+                    <!-- Replace with your actual Asset Store URL -->
+                    <a class="button" href="https://assetstore.unity.com/packages/slug/348684" target="_blank">
+                        View on Unity Asset Store
+                    </a>
+                </div>
+            </div>
+            <div class="asset-preview">
+                <!-- Optional asset image -->
+                <img src="asset-preview.png" alt="Asset Preview" />
+
+                <div class="asset-meta">
+                    <strong>Asset Name</strong>
+                    <span>
+                        Simple Save is a lightweight, designer-friendly, fully cross-platform save system built for Unity 6 and beyond. Just drop it in, mark what you want saved, and you're done.
+                    </span>
+
+                    <!-- Replace with your actual Asset Store URL -->
+                    <a class="button" href="https://assetstore.unity.com/packages/slug/348150" target="_blank">
+                        View on Unity Asset Store
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT INFORMATION -->
+        <section class="card">
+            <h2>Contact</h2>
+
+            <div class="contact-list">
+                <div class="contact-item">
+                    <span>Email</span>
+                    <strong>3headedcobra.com</strong>
+                </div>
+
+                <div class="contact-item">
+                    <span>Unity Publisher</span>
+                    <strong>CedarRose</strong>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 Cedar Rose — All rights reserved
+    </footer>
+
+</body>
+</html>
